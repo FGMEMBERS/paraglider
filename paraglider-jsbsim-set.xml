@@ -27,7 +27,6 @@ David Culp,  davidculp2@comcast.net
   </position>
   
   <sound>
-   <audible>true</audible>
    <path>Aircraft/sgs126/glider-sound.xml</path>
   </sound>
 
