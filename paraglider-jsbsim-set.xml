@@ -20,20 +20,22 @@ David Culp,  davidculp2@comcast.net
    <wBody-fps>8</wBody-fps>
    <trim type="bool">false</trim>
    <onground type="bool">false</onground>
+   <altitude-ft>3000</altitude-ft>
   </presets>
 
   <position>
     <altitude-agl-ft>5000</altitude-agl-ft>
   </position>
+
+/sim/presets/altitude-ft
   
   <sound>
    <path>Aircraft/sgs126/glider-sound.xml</path>
   </sound>
 
+  <virtual-cockpit archive="y">true</virtual-cockpit>
   <panel>
-   <path>Aircraft/sgs126/Panels/glider-panel.xml</path>
    <visibility archive="y">false</visibility>
-   <x-offset>256</x-offset>
   </panel>
 
   <systems>
@@ -51,7 +53,14 @@ David Culp,  davidculp2@comcast.net
    <path>Aircraft/paraglider/Models/paraglider_model.xml</path>
   </model>
 
+  <view>
+   <internal archive="y">true</internal>
+   <config>
+     <x-offset-m archive="y">0.0</x-offset-m>
+     <y-offset-m archive="y">0.20</y-offset-m>
+     <z-offset-m archive="y">0.0</z-offset-m>
+   </config>
+  </view>
  </sim>
-
 
 </PropertyList>
