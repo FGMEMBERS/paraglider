@@ -27,10 +27,8 @@ David Culp,  davidculp2@comcast.net
     <altitude-agl-ft>5000</altitude-agl-ft>
   </position>
 
-/sim/presets/altitude-ft
-  
   <sound>
-   <path>Aircraft/sgs126/glider-sound.xml</path>
+   <path>Aircraft/sgs233/glider-sound.xml</path>
   </sound>
 
   <virtual-cockpit archive="y">true</virtual-cockpit>
@@ -40,8 +38,8 @@ David Culp,  davidculp2@comcast.net
 
   <systems>
    <electrical>
-    <path>Aircraft/sgs126/null-electrical.xml</path>
-    <servicable archive="y">false</servicable>
+    <path>Aircraft/sgs233/null-electrical.xml</path>
+    <serviceable archive="y">false</serviceable>
    </electrical>
   </systems>
 
