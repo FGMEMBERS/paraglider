@@ -11,7 +11,8 @@ David Culp,  davidculp2@comcast.net
  <sim>
 
   <description>paraglider</description>
-  <author>David Culp</author>
+  <author>David Culp (FDM), Capt. Slug (3D)</author>
+  <status>beta</status>
  
   <flight-model>jsb</flight-model>
   <aero>paraglider</aero>
