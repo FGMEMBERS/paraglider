@@ -61,6 +61,10 @@ David Culp,  davidculp2@comcast.net
      <z-offset-m archive="y">0.0</z-offset-m>
    </config>
   </view>
+
+  <help>
+   <title>paraglider</title>
+  </help>
  </sim>
 
 </PropertyList>
