@@ -18,9 +18,11 @@ David Culp,  davidculp2@comcast.net
   <aero>paraglider</aero>
 
   <presets>
+<!--
    <uBody-fps>10</uBody-fps>
    <wBody-fps>8</wBody-fps>
    <trim type="bool">false</trim>
+-->
    <onground type="bool">false</onground>
    <altitude-ft>3000</altitude-ft>
   </presets>

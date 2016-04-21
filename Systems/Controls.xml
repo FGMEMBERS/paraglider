@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+
+<system name="Parahute Controls">
+
+  <channel name="Roll">
+   <summer name="Roll Trim Summer">
+      <input>fcs/aileron-cmd-norm</input>
+      <input>fcs/roll-trim-cmd-norm</input>
+      <clipto>
+        <min> -1 </min>
+        <max>  1 </max>
+      </clipto>
+      <output>fcs/roll-trim-sum</output>
+   </summer>
+
+   <aerosurface_scale name="Left Aileron Control">
+      <input>fcs/roll-trim-sum</input>
+      <range>
+        <min> -0.785 </min>
+        <max>  0.785 </max>
+      </range>
+      <output>fcs/left-aileron-pos-rad</output>
+   </aerosurface_scale>
+
+   <aerosurface_scale name="Right Aileron Control">
+      <input>-fcs/roll-trim-sum</input>
+      <range>
+        <min> -0.785 </min>
+        <max>  0.785 </max>
+      </range>
+      <output>fcs/right-aileron-pos-rad</output>
+   </aerosurface_scale>
+
+   <aerosurface_scale name="Left Aileron Normalization">
+      <input>fcs/left-aileron-pos-rad</input>
+      <domain>
+        <min> -0.785 </min>
+        <max>  0.785 </max>
+      </domain>
+      <range>
+        <min> -1 </min>
+        <max>  1 </max>
+      </range>
+      <output>fcs/left-aileron-pos-norm</output>
+   </aerosurface_scale>
+   <aerosurface_scale name="Right Aileron Normalization">
+      <input>fcs/right-aileron-pos-rad</input>
+      <domain>
+        <min> -0.785 </min>
+        <max>  0.785 </max>
+      </domain>
+      <range>
+        <min> -1 </min>
+        <max>  1 </max>
+      </range>
+      <output>fcs/right-aileron-pos-norm</output>
+   </aerosurface_scale>
+  </channel>
+
+  <channel name="Pitch">
+   <summer name="Pitch Trim Summer">
+      <input>fcs/elevator-cmd-norm</input>
+      <input>fcs/pitch-trim-cmd-norm</input>
+      <input>fcs/left-aileron-pos-norm</input>
+      <input>fcs/right-aileron-pos-norm</input>
+      <clipto>
+        <min>  0 </min>
+        <max>  2 </max>
+      </clipto>
+      <output>fcs/pitch-trim-sum</output>
+   </summer>
+
+   <aerosurface_scale name="Elevon Control">
+      <input>fcs/pitch-trim-sum</input>
+      <range>
+        <min>  0.000 </min>
+        <max>  0.785 </max>
+      </range>
+      <output>fcs/elevator-pos-rad</output>
+   </aerosurface_scale>
+
+   <aerosurface_scale name="Elevon Normalization">
+      <input>fcs/elevator-pos-rad</input>
+      <domain>
+        <min>  0.000 </min>
+        <max>  0.785 </max>
+      </domain>
+      <range>
+        <min>  0 </min>
+        <max>  2 </max>
+      </range>
+      <output>fcs/elevator-pos-norm</output>
+   </aerosurface_scale>
+  </channel>
+
+</system>
