@@ -10,11 +10,11 @@
         <min> -1 </min>
         <max>  1 </max>
       </clipto>
-      <output>fcs/roll-trim-sum</output>
+      <output>fcs/aileron-pos-norm</output>
    </summer>
 
    <aerosurface_scale name="Left Aileron Control">
-      <input>fcs/roll-trim-sum</input>
+      <input>fcs/aileron-pos-norm</input>
       <range>
         <min> -0.785 </min>
         <max>  0.785 </max>
@@ -23,7 +23,7 @@
    </aerosurface_scale>
 
    <aerosurface_scale name="Right Aileron Control">
-      <input>-fcs/roll-trim-sum</input>
+      <input>-fcs/aileron-pos-norm</input>
       <range>
         <min> -0.785 </min>
         <max>  0.785 </max>
