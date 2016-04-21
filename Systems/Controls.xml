@@ -4,8 +4,8 @@
 
   <channel name="Roll">
    <summer name="Roll Trim Summer">
-      <input>fcs/aileron-cmd-norm</input>
-      <input>fcs/roll-trim-cmd-norm</input>
+      <input>-fcs/aileron-cmd-norm</input>
+      <input>-fcs/roll-trim-cmd-norm</input>
       <clipto>
         <min> -1 </min>
         <max>  1 </max>

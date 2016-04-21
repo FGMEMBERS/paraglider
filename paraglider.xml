@@ -142,7 +142,7 @@
         <property>metrics/Sw-sqft</property>
         <table>
         <independentVar lookup="row">aero/alpha-deg</independentVar>
-        <independentVar lookup="column">fcs/right-aileron-pos-norm</independentVar>
+        <independentVar lookup="column">fcs/aileron-pos-norm</independentVar>
         <tableData>
                  -1.0     0.0     1.0
             0.0   0.004   0.000  -0.004
@@ -278,7 +278,7 @@
         <property>metrics/bw-ft</property>
         <table>
         <independentVar lookup="row">aero/alpha-deg</independentVar>
-        <independentVar lookup="column">fcs/right-aileron-pos-norm</independentVar>
+        <independentVar lookup="column">fcs/aileron-pos-norm</independentVar>
         <tableData>
                  -1.0     0.0     1.0
             0.0  -0.018   0.000   0.018
@@ -466,7 +466,7 @@
         <property>metrics/bw-ft</property>
         <table>
         <independentVar lookup="row">aero/alpha-deg</independentVar>
-        <independentVar lookup="column">fcs/right-aileron-pos-norm</independentVar>
+        <independentVar lookup="column">fcs/aileron-pos-norm</independentVar>
         <tableData>
                  -1.0     0.0     1.0
             0.0   0.007   0.001  -0.007
