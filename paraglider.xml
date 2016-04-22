@@ -44,9 +44,9 @@
   </metrics>
 
   <mass_balance>
-  <ixx unit="SLUG*FT2">2000</ixx>
-  <iyy unit="SLUG*FT2">2000</iyy>
-  <izz unit="SLUG*FT2">100</izz>
+  <ixx unit="SLUG*FT2">1.703</ixx>
+  <iyy unit="SLUG*FT2">1.898</iyy>
+  <izz unit="SLUG*FT2">1.360</izz>
   <emptywt unit="LBS"> 10</emptywt>
     <location name="CG" unit="IN">
       <x> 0 </x>
