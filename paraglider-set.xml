@@ -1,8 +1,78 @@
 <?xml version="1.0"?>
+<!--
+************************************************************************
+paraglider JSBSim config file
+David Culp,  davidculp2@comcast.net
+************************************************************************
+-->
 
-<PropertyList include="paraglider-jsbsim-set.xml">
+<PropertyList>
+
  <sim>
-  <description>Alias for paraglider-jsbsim.</description>
-  <exclude-from-catalog type="bool">true</exclude-from-catalog>
+
+  <description>paraglider</description>
+  <author>David Culp, Erik Hofman (FDM), Capt. Slug (3D)</author>
+  <status>beta</status>
+  <rating>
+   <FDM type="int">4</FDM>
+   <systems type="int">4</systems>
+   <model type="int">2</model>
+   <cockpit type="int">0</cockpit>
+  </rating>
+ 
+  <flight-model>jsb</flight-model>
+  <aero>paraglider</aero>
+
+  <presets>
+<!--
+   <uBody-fps>10</uBody-fps>
+   <wBody-fps>8</wBody-fps>
+   <trim type="bool">false</trim>
+-->
+   <onground type="bool">false</onground>
+   <altitude-ft>3000</altitude-ft>
+  </presets>
+
+  <position>
+    <altitude-agl-ft>5000</altitude-agl-ft>
+  </position>
+
+  <sound>
+   <path>Aircraft/sgs233/glider-sound.xml</path>
+  </sound>
+
+  <virtual-cockpit archive="y">true</virtual-cockpit>
+  <panel>
+   <visibility archive="y">false</visibility>
+  </panel>
+
+  <systems>
+   <electrical>
+    <path>Aircraft/sgs233/null-electrical.xml</path>
+    <serviceable archive="y">false</serviceable>
+   </electrical>
+  </systems>
+
+  <hud>
+   <visibility type="bool">false</visibility>
+  </hud>
+
+  <model>
+   <path>Aircraft/paraglider/Models/paraglider_model.xml</path>
+  </model>
+
+  <view>
+   <internal archive="y">true</internal>
+   <config>
+     <x-offset-m archive="y">0.0</x-offset-m>
+     <y-offset-m archive="y">0.20</y-offset-m>
+     <z-offset-m archive="y">0.0</z-offset-m>
+   </config>
+  </view>
+
+  <help>
+   <title>paraglider</title>
+  </help>
  </sim>
+
 </PropertyList>
