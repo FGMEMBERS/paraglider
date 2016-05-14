@@ -19,8 +19,8 @@
   </fileheader>
 
   <metrics>
-    <wingarea unit="FT2"> 200 </wingarea>
-    <wingspan unit="FT"> 25 </wingspan>
+    <wingarea unit="FT2"> 300 </wingarea>
+    <wingspan unit="FT"> 32 </wingspan>
     <chord unit="FT"> 8 </chord>
     <htailarea unit="FT2"> 1 </htailarea>
     <htailarm unit="FT"> 1 </htailarm>
@@ -61,6 +61,24 @@
         <z> -240 </z>
       </location>
     </pointmass>
+    <pointmass name="Polini Engine">
+      <weight unit="LBS"> 25.13 </weight>
+      <location name="POINTMASS" unit="IN">
+        <x>  0 </x>
+        <y>  0 </y>
+        <z> -240 </z>
+      </location>
+    </pointmass>
+    <pointmass name="DT Propeller">
+      <weight unit="LBS"> 25.13 </weight>
+      <location name="POINTMASS" unit="IN">
+        <x>  0 </x>
+        <y>  0 </y>
+        <z> -240 </z>
+      </location>
+    </pointmass>
+
+    2.425
   </mass_balance>
 
   <ground_reactions>
@@ -99,6 +117,43 @@
   <system file="Controls.xml"/>
 
   <propulsion>
+    <engine file="Polini_THOR80">
+    <location unit="IN">
+      <x>     0.00 </x>
+      <y>     0.00 </y>
+      <z>  -240.00 </z>
+    </location>
+    <orient unit="DEG">
+      <pitch>     0.00 </pitch>
+       <roll>     0.00 </roll>
+        <yaw>     0.00 </yaw>
+    </orient>
+    <feed> 0 </feed>
+
+    <thruster file="DT_Propeller">
+     <sense> 1 </sense>
+     <location unit="IN">
+       <x>     0.00 </x>
+       <y>     0.00 </y>
+       <z>  -240.00 </z>
+     </location>
+     <orient unit="DEG">
+       <pitch>     0.00 </pitch>
+        <roll>     0.00 </roll>
+         <yaw>     0.00 </yaw>
+     </orient>
+    </thruster>
+  </engine>
+
+  <tank type="FUEL" number="0">
+     <location unit="IN">
+       <x>     0.00 </x>
+       <y>     0.00 </y>
+       <z>  -240.00 </z>
+     </location>
+     <capacity unit="LBS"> 3.5 </capacity>
+     <contents unit="LBS"> 1.0 </contents>
+  </tank>
   </propulsion>
 
   <flight_control name="FCS: paraglider_FCS">

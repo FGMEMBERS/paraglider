@@ -75,4 +75,10 @@ David Culp,  davidculp2@comcast.net
   </help>
  </sim>
 
+ <engines>
+  <engine n="0">
+   <running>true</running>
+  </engine>
+ </engines>
+
 </PropertyList>
