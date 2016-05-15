@@ -21,7 +21,7 @@
   <metrics>
     <wingarea unit="FT2"> 300 </wingarea>
     <wingspan unit="FT"> 32 </wingspan>
-    <chord unit="FT"> 8 </chord>
+    <chord unit="FT"> 7 </chord>
     <htailarea unit="FT2"> 1 </htailarea>
     <htailarm unit="FT"> 1 </htailarm>
     <vtailarea unit="FT2"> 1 </vtailarea>
@@ -64,7 +64,7 @@
     <pointmass name="Polini Engine">
       <weight unit="LBS"> 25.13 </weight>
       <location name="POINTMASS" unit="IN">
-        <x>  0 </x>
+        <x>  8 </x>
         <y>  0 </y>
         <z> -240 </z>
       </location>
@@ -72,7 +72,7 @@
     <pointmass name="DT Propeller">
       <weight unit="LBS"> 25.13 </weight>
       <location name="POINTMASS" unit="IN">
-        <x>  0 </x>
+        <x> 10 </x>
         <y>  0 </y>
         <z> -240 </z>
       </location>
@@ -119,7 +119,7 @@
   <propulsion>
     <engine file="Polini_THOR80">
     <location unit="IN">
-      <x>     0.00 </x>
+      <x>     8.00 </x>
       <y>     0.00 </y>
       <z>  -240.00 </z>
     </location>
@@ -133,7 +133,7 @@
     <thruster file="DT_Propeller">
      <sense> 1 </sense>
      <location unit="IN">
-       <x>     0.00 </x>
+       <x>    10.00 </x>
        <y>     0.00 </y>
        <z>  -240.00 </z>
      </location>
@@ -147,9 +147,9 @@
 
   <tank type="FUEL" number="0">
      <location unit="IN">
-       <x>     0.00 </x>
+       <x>     8.00 </x>
        <y>     0.00 </y>
-       <z>  -240.00 </z>
+       <z>  -250.00 </z>
      </location>
      <capacity unit="LBS"> 3.5 </capacity>
      <contents unit="LBS"> 1.0 </contents>
@@ -371,15 +371,16 @@
         </table>
       </product>
       </function>
-<!--
       <function name="aero/coefficient/Clp">
-      <description>Roll_moment_due_to_roll_rate</description>
-      <product>
+       <description>Roll_moment_due_to_roll_rate</description>
+       <product>
         <property>aero/qbar-psf</property>
         <property>metrics/Sw-sqft</property>
         <property>metrics/bw-ft</property>
         <property>aero/bi2vel</property>
         <property>velocities/p-aero-rad_sec</property>
+        <value>-3</value>
+<!--
         <table>
         <independentVar>aero/alpha-deg</independentVar>
         <tableData>
@@ -391,19 +392,8 @@
          10   0.367
         </tableData>
         </table>
-      </product>
-      </function>
 -->
-      <function name="aero/coefficient/Clp"> <!-- Culp -->
-        <description>Roll_moment_due_to_roll_rate</description>
-        <product>
-          <property>aero/qbar-psf</property>
-          <property>metrics/Sw-sqft</property>
-          <property>metrics/bw-ft</property>
-          <property>aero/bi2vel</property>
-          <property>velocities/p-aero-rad_sec</property>
-          <value>-3</value>
-        </product>
+       </product>
       </function>
       <function name="aero/moment/Clr">
       <description>Roll moment due to yaw rate</description>
@@ -476,7 +466,6 @@
         </table>
         </product>
       </function>
-<!--
       <function name="aero/moment/Cmq">
         <description>Pitch moment due to pitch rate</description>
         <product>
@@ -485,6 +474,8 @@
           <property>metrics/cbarw-ft</property>
           <property>aero/ci2vel</property>
           <property>velocities/q-aero-rad_sec</property>
+          <value>-50</value>
+<!--
         <table>
         <independentVar>aero/alpha-deg</independentVar>
         <tableData>
@@ -496,19 +487,8 @@
           10.0   0.5
         </tableData>
         </table>
-        </product>
-      </function>
 -->
-      <function name="aero/coefficient/Cmq"> <!-- Culp -->
-       <description>Pitch_moment_due_to_pitch_rate</description>
-       <product>
-           <property>aero/qbar-psf</property>
-           <property>metrics/Sw-sqft</property>
-           <property>metrics/cbarw-ft</property>
-           <property>aero/ci2vel</property>
-           <property>velocities/q-aero-rad_sec</property>
-           <value>-30</value>
-       </product>
+        </product>
       </function>
     </axis>
 
