@@ -34,7 +34,7 @@
     <location name="EYEPOINT" unit="IN">
       <x> 0 </x>
       <y> 0 </y>
-      <z> -240 </z>
+      <z> -330 </z>
     </location>
     <location name="VRP" unit="IN">
       <x> 0 </x>
@@ -58,15 +58,15 @@
       <location name="POINTMASS" unit="IN">
         <x>  0 </x>
         <y>  0 </y>
-        <z> -240 </z>
+        <z> -330 </z>
       </location>
     </pointmass>
     <pointmass name="Polini Engine">
       <weight unit="LBS"> 25.13 </weight>
       <location name="POINTMASS" unit="IN">
-        <x>  8 </x>
+        <x>  4 </x>
         <y>  0 </y>
-        <z> -240 </z>
+        <z> -330 </z>
       </location>
     </pointmass>
     <pointmass name="DT Propeller">
@@ -74,11 +74,9 @@
       <location name="POINTMASS" unit="IN">
         <x> 10 </x>
         <y>  0 </y>
-        <z> -240 </z>
+        <z> -330 </z>
       </location>
     </pointmass>
-
-    2.425
   </mass_balance>
 
   <ground_reactions>
@@ -119,9 +117,9 @@
   <propulsion>
     <engine file="Polini_THOR80">
     <location unit="IN">
-      <x>     8.00 </x>
+      <x>     4.00 </x>
       <y>     0.00 </y>
-      <z>  -240.00 </z>
+      <z>  -330.00 </z>
     </location>
     <orient unit="DEG">
       <pitch>     0.00 </pitch>
@@ -135,7 +133,7 @@
      <location unit="IN">
        <x>    10.00 </x>
        <y>     0.00 </y>
-       <z>  -240.00 </z>
+       <z>  -330.00 </z>
      </location>
      <orient unit="DEG">
        <pitch>     0.00 </pitch>

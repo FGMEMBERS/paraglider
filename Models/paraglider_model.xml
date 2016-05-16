@@ -3,5 +3,43 @@
 <PropertyList>
 
  <path>pg.ac</path>
+ <offsets>
+    <heading-deg>-90</heading-deg>
+    <pitch-deg>0</pitch-deg>
+    <roll-deg>0</roll-deg>
+  </offsets>
+
+ <effect>
+    <inherits-from>Aircraft/Parachutist/Models/Effects/wingflexR</inherits-from>
+    <object-name>seg12</object-name>
+    <object-name>seg34</object-name>
+    <object-name>seg56</object-name>
+    <object-name>seg78</object-name>
+    <object-name>seg910</object-name>
+    <object-name>seg1112</object-name>
+    <object-name>seg1314</object-name>
+    <object-name>seg1516</object-name>
+    <object-name>seg1718</object-name>
+    <object-name>seg1920</object-name>
+    <object-name>seg2122</object-name>
+    <object-name>chords_r</object-name>
+    <object-name>control_r</object-name>
+  </effect>
+
+  <effect>
+    <inherits-from>Aircraft/Parachutist/Models/Effects/wingflexL</inherits-from>
+    <object-name>seg2324</object-name>
+    <object-name>seg2526</object-name>
+    <object-name>seg2728</object-name>
+    <object-name>seg2930</object-name>
+    <object-name>seg3132</object-name>
+    <object-name>seg3334</object-name>
+    <object-name>seg3536</object-name>
+    <object-name>seg3738</object-name>
+    <object-name>seg3940</object-name>
+    <object-name>seg4142</object-name>
+    <object-name>chords_l</object-name>
+    <object-name>control_l</object-name>
+  </effect>
 
 </PropertyList>

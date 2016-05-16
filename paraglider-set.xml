@@ -37,21 +37,10 @@ David Culp,  davidculp2@comcast.net
     <altitude-agl-ft>5000</altitude-agl-ft>
   </position>
 
-  <sound>
-   <path>Aircraft/sgs233/glider-sound.xml</path>
-  </sound>
-
   <virtual-cockpit archive="y">true</virtual-cockpit>
   <panel>
    <visibility archive="y">false</visibility>
   </panel>
-
-  <systems>
-   <electrical>
-    <path>Aircraft/sgs233/null-electrical.xml</path>
-    <serviceable archive="y">false</serviceable>
-   </electrical>
-  </systems>
 
   <hud>
    <visibility type="bool">false</visibility>
@@ -65,10 +54,17 @@ David Culp,  davidculp2@comcast.net
    <internal archive="y">true</internal>
    <config>
      <x-offset-m archive="y">0.0</x-offset-m>
-     <y-offset-m archive="y">0.20</y-offset-m>
-     <z-offset-m archive="y">0.0</z-offset-m>
+     <y-offset-m archive="y">0.05</y-offset-m>
+     <z-offset-m archive="y">0.08</z-offset-m>
    </config>
   </view>
+
+  <systems>
+   <property-rule n="100">
+    <name>animation</name>
+    <path>Systems/Animation.xml</path>
+   </property-rule>
+  </systems>
 
   <help>
    <title>paraglider</title>
