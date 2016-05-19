@@ -37,21 +37,10 @@ David Culp,  davidculp2@comcast.net
     <altitude-agl-ft>5000</altitude-agl-ft>
   </position>
 
-  <sound>
-   <path>Aircraft/sgs233/glider-sound.xml</path>
-  </sound>
-
   <virtual-cockpit archive="y">true</virtual-cockpit>
   <panel>
    <visibility archive="y">false</visibility>
   </panel>
-
-  <systems>
-   <electrical>
-    <path>Aircraft/sgs233/null-electrical.xml</path>
-    <serviceable archive="y">false</serviceable>
-   </electrical>
-  </systems>
 
   <hud>
    <visibility type="bool">false</visibility>
@@ -65,14 +54,78 @@ David Culp,  davidculp2@comcast.net
    <internal archive="y">true</internal>
    <config>
      <x-offset-m archive="y">0.0</x-offset-m>
-     <y-offset-m archive="y">0.20</y-offset-m>
-     <z-offset-m archive="y">0.0</z-offset-m>
+     <y-offset-m archive="y">0.05</y-offset-m>
+     <z-offset-m archive="y">0.08</z-offset-m>
    </config>
   </view>
+
+  <systems>
+   <property-rule n="100">
+    <name>animation</name>
+    <path>Systems/Animation.xml</path>
+   </property-rule>
+  </systems>
 
   <help>
    <title>paraglider</title>
   </help>
  </sim>
+
+ <keyboard>
+  <key n="115">
+   <name>s</name>
+   <desc>Start/Stop the engine</desc>
+   <binding>
+    <command>property-toggle</command>
+    <property>/controls/engines/engine/starter</property>
+   </binding>
+  </key>
+  <key n="57">
+   <name>PageUp</name>
+   <desc>Increase throttle or autopilot autothrottle</desc>
+   <binding>
+    <command>property-assign</command>
+    <property>/engines/engine/throttle</property>
+    <value type="float">1.0</value>
+   </binding>
+  </key>
+  <key n="51">
+   <name>PageDown</name>
+   <desc>Decrease throttle or autopilot autothrottle</desc>
+   <binding>
+    <command>property-assign</command>
+    <property>/engines/engine/throttle</property>
+    <value type="float">0.0</value>
+   </binding>
+  </key>
+  <key n="360">
+   <name>PageUp</name>
+   <desc>Increase throttle or autopilot autothrottle</desc>
+   <binding>
+    <command>property-assign</command>
+    <property>/engines/engine/throttle</property>
+    <value type="float">1.0</value>
+   </binding>
+  </key>
+  <key n="361">
+   <name>PageDown</name>
+   <desc>Decrease throttle or autopilot autothrottle</desc>
+   <binding>
+    <command>property-assign</command>
+    <property>/engines/engine/throttle</property>
+    <value type="float">0.0</value>
+   </binding>
+  </key>
+ </keyboard>
+
+ <controls>
+  <engines>
+   <engine>
+    <throttle type="float">1.0</throttle>
+    <magnetos>1</magnetos>
+    <state>1</state>
+   </engine>
+  </engines>
+ </controls>
 
 </PropertyList>
