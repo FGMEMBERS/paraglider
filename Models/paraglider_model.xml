@@ -2,8 +2,9 @@
 
 <PropertyList>
 
- <path>pg.ac</path>
- <offsets>
+  <path>pg.ac</path>
+  <offsets>
+    <z-m> 0.0</z-m>
     <heading-deg>-90</heading-deg>
     <pitch-deg>0</pitch-deg>
     <roll-deg>0</roll-deg>

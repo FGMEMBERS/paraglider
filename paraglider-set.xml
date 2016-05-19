@@ -121,7 +121,7 @@ David Culp,  davidculp2@comcast.net
  <controls>
   <engines>
    <engine>
-    <throttle type="float">1.0</throttle>
+    <throttle type="float">0.0</throttle>
     <magnetos>1</magnetos>
     <state>1</state>
    </engine>
