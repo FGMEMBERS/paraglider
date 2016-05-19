@@ -69,14 +69,16 @@
         <z> -330 </z>
       </location>
     </pointmass>
+<!--
     <pointmass name="DT Propeller">
-      <weight unit="LBS"> 25.13 </weight>
+      <weight unit="LBS"> 2.425 </weight>
       <location name="POINTMASS" unit="IN">
         <x> 10 </x>
         <y>  0 </y>
         <z> -330 </z>
       </location>
     </pointmass>
+-->
   </mass_balance>
 
   <ground_reactions>
@@ -147,7 +149,7 @@
      <location unit="IN">
        <x>     8.00 </x>
        <y>     0.00 </y>
-       <z>  -250.00 </z>
+       <z>  -330.00 </z>
      </location>
      <capacity unit="LBS"> 3.5 </capacity>
      <contents unit="LBS"> 1.0 </contents>
@@ -490,7 +492,7 @@
        <property>aero/qbar-psf</property>
        <property>metrics/Sp-sqft</property>
        <property>metrics/bp-ft</property>
-       <value>-0.5</value>
+       <value>2</value>
        </product>
      </function>
      <function name="aero/moment/Cmadot">
