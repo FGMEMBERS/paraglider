@@ -207,7 +207,7 @@
       <product>
        <property>aero/qbar-psf</property>
        <property>metrics/Sp-sqft</property>
-       <value>1.0</value>
+       <value>1.5</value>
       </product>
      </function>
     </axis>
@@ -490,7 +490,7 @@
        <property>aero/qbar-psf</property>
        <property>metrics/Sp-sqft</property>
        <property>metrics/bp-ft</property>
-       <value>1.3</value>
+       <value>1.5</value>
        </product>
      </function>
      <function name="aero/moment/Cmadot">

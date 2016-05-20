@@ -25,7 +25,7 @@
   <numblades> 2 </numblades>
   <gearratio> 3.58 </gearratio>
   <cp_factor> 1.00 </cp_factor>
-  <ct_factor> 50.00 </ct_factor>
+  <ct_factor> 1.00 </ct_factor>
 
   <table name="C_THRUST" type="internal">
      <tableData>
