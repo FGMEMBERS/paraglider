@@ -31,7 +31,7 @@ Erik Hofman, erik@ehofman.com		Added ram-air FMD, engine and updated 3D
   <aero>paraglider</aero>
 
   <startup>
-   <splash-texture>Aircraft/Parachutist/Parachutist-splash.jpg</splash-texture>
+   <splash-texture>Aircraft/paraglider/splash.jpg</splash-texture>
   </startup>
 
   <model>
