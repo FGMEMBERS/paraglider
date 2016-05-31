@@ -3,7 +3,6 @@
 <PropertyList>
 
  <fx>
-
   <cough>
    <name>cough</name>
    <mode>once</mode>
@@ -43,8 +42,49 @@
     <y>0.0</y>
     <z>0.0</z>
    </orientation>
+   <volume version="2.0">
+    <expression>
+     <product>
+      <min>
+       <max>
+        <product>
+         <property>engines/engine/mp-osi</property>
+         <value>0.23</value>
+        </product>
+        <value>1.0</value>
+       </max>
+        <value>0.3</value>
+      </min>
+      <min>
+       <max>
+        <log> <property>orientation/alpha-deg</property> </log>
+        <value>1.2</value>
+       </max>
+       <value>1.0</value>
+      </min>
+     </product>
+    </expression>
+   </volume>
+   <pitch version="2.0">
+    <expression>
+     <min>
+      <max>
+       <sum>
+        <value>0.4</value>
+        <product>
+         <property>engines/engine/rpm</property>
+         <value>0.0001</value>
+        </product>
+       </sum>
+       <value>1.2</value>
+      </max>
+      <value>0.4</value>
+    </min>
+    </expression>
+   </pitch>
+<!-- backwards compatibility -->
    <volume>
-    <property>/engines/engine/mp-osi</property>
+    <property>engines/engine/mp-osi</property>
     <factor>0.23</factor>
     <min>0.3</min>
     <max>1.0</max>
@@ -62,11 +102,13 @@
     <max>1.2</max>
     <offset>0.4</offset>
    </pitch>
+<!-- backwards compatibility -->
   </engine>
 
   <wind>
    <name>wind</name>
    <mode>looped</mode>
+   <type>avionics</type>
    <path>Sounds/wind.wav</path>
    <property>velocities/airspeed-kt</property>
    <volume>
