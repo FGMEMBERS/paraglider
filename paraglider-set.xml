@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
 <!--
 ************************************************************************
-paraglider JSBSim config file
-David Culp,  davidculp2@comcast.net
+Powered paraglider JSBSim config file
+
+David Culp,  davidculp2@comcast.net	Initial implementation
+Erik Hofman, erik@ehofman.com		Added ram-air FMD, engine and updated 3D
 ************************************************************************
 -->
 
@@ -11,44 +13,39 @@ David Culp,  davidculp2@comcast.net
  <sim>
 
   <description>paraglider</description>
-  <author>David Culp, Erik Hofman (FDM), Capt. Slug (3D)</author>
-  <status>beta</status>
+  <author>Erik hofman, David Culp (FDM), Capt. Slug (3D)</author>
+  <status>release</status>
   <rating>
    <FDM type="int">4</FDM>
    <systems type="int">4</systems>
-   <model type="int">2</model>
-   <cockpit type="int">0</cockpit>
+   <model type="int">4</model>
+   <cockpit type="int">2</cockpit>
   </rating>
+
+  <tags>
+   <tag>glider</tag>
+   <tag> unpowered</tag>
+  </tags>
  
   <flight-model>jsb</flight-model>
   <aero>paraglider</aero>
 
-  <presets>
-<!--
-   <uBody-fps>10</uBody-fps>
-   <wBody-fps>8</wBody-fps>
-   <trim type="bool">false</trim>
--->
-   <onground type="bool">false</onground>
-   <altitude-ft>3000</altitude-ft>
-  </presets>
-
-  <position>
-    <altitude-agl-ft>5000</altitude-agl-ft>
-  </position>
-
-  <virtual-cockpit archive="y">true</virtual-cockpit>
-  <panel>
-   <visibility archive="y">false</visibility>
-  </panel>
-
-  <hud>
-   <visibility type="bool">false</visibility>
-  </hud>
+  <startup>
+   <splash-texture>Aircraft/paraglider/splash.jpg</splash-texture>
+  </startup>
 
   <model>
    <path>Aircraft/paraglider/Models/paraglider_model.xml</path>
   </model>
+
+  <sound>
+   <path>Aircraft/paraglider/sound.xml</path>
+  </sound>
+
+  <presets>
+   <onground type="bool">false</onground>
+   <altitude-ft>3000</altitude-ft>
+  </presets>
 
   <view>
    <internal archive="y">true</internal>
@@ -59,6 +56,11 @@ David Culp,  davidculp2@comcast.net
    </config>
   </view>
 
+  <virtual-cockpit archive="y">true</virtual-cockpit>
+  <panel>
+   <visibility archive="y">false</visibility>
+  </panel>
+
   <systems>
    <property-rule n="100">
     <name>animation</name>
@@ -67,61 +69,31 @@ David Culp,  davidculp2@comcast.net
   </systems>
 
   <help>
-   <title>paraglider</title>
+   <title>Powered Paraglider</title>
+   <key>
+    <name>s</name>
+    <desc>Start the engine.</desc>
+   </key>
+   <key>
+    <name>{</name> 
+    <desc>Cut-off the engine.</desc>
+   </key>
+   <key>
+    <name>}</name> 
+    <desc>Restart the engine.</desc>
+   </key>
   </help>
+
  </sim>
 
- <keyboard>
-  <key n="115">
-   <name>s</name>
-   <desc>Start/Stop the engine</desc>
-   <binding>
-    <command>property-toggle</command>
-    <property>/controls/engines/engine/starter</property>
-   </binding>
-  </key>
-  <key n="57">
-   <name>PageUp</name>
-   <desc>Increase throttle or autopilot autothrottle</desc>
-   <binding>
-    <command>property-assign</command>
-    <property>/engines/engine/throttle</property>
-    <value type="float">1.0</value>
-   </binding>
-  </key>
-  <key n="51">
-   <name>PageDown</name>
-   <desc>Decrease throttle or autopilot autothrottle</desc>
-   <binding>
-    <command>property-assign</command>
-    <property>/engines/engine/throttle</property>
-    <value type="float">0.0</value>
-   </binding>
-  </key>
-  <key n="360">
-   <name>PageUp</name>
-   <desc>Increase throttle or autopilot autothrottle</desc>
-   <binding>
-    <command>property-assign</command>
-    <property>/engines/engine/throttle</property>
-    <value type="float">1.0</value>
-   </binding>
-  </key>
-  <key n="361">
-   <name>PageDown</name>
-   <desc>Decrease throttle or autopilot autothrottle</desc>
-   <binding>
-    <command>property-assign</command>
-    <property>/engines/engine/throttle</property>
-    <value type="float">0.0</value>
-   </binding>
-  </key>
- </keyboard>
+ <input>
+  <keyboard include="keyboard.xml"/>
+ </input>
 
  <controls>
   <engines>
    <engine>
-    <throttle type="float">1.0</throttle>
+    <throttle type="float">0.0</throttle>
     <magnetos>1</magnetos>
     <state>1</state>
    </engine>
