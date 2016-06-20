@@ -52,7 +52,7 @@ Erik Hofman, erik@ehofman.com		Added ram-air FMD, engine and updated 3D
    <config>
      <x-offset-m archive="y">0.0</x-offset-m>
      <y-offset-m archive="y">0.05</y-offset-m>
-     <z-offset-m archive="y">0.08</z-offset-m>
+     <z-offset-m archive="y">-0.08</z-offset-m>
    </config>
   </view>
 
