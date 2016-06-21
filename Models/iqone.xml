@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>iqone.ac</path>
+ <offsets>
+  <heading-deg>-180</heading-deg>
+  <pitch-deg>15</pitch-deg>
+  <roll-deg>-43</roll-deg>
+ </offsets>
+
+</PropertyList>

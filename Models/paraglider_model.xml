@@ -11,6 +11,15 @@
   </offsets>
 
   <model>
+   <path>Aircraft/paraglider/Models/iqone.xml</path>
+   <offsets>
+     <x-m>-0.24</x-m>
+     <y-m>-0.06</y-m>
+     <z-m>-0.36</z-m>
+   </offsets>
+ </model>
+
+  <model>
    <path>Aircraft/paraglider/Models/thor.xml</path>
    <offsets>
      <x-m> 0.0</x-m>
@@ -23,7 +32,7 @@
  </model>
 
  <effect>
-    <inherits-from>Aircraft/Parachutist/Models/Effects/wingflexR</inherits-from>
+    <inherits-from>Aircraft/paraglider/Models/Effects/wingflexR</inherits-from>
     <object-name>seg12</object-name>
     <object-name>seg34</object-name>
     <object-name>seg56</object-name>
@@ -40,7 +49,7 @@
   </effect>
 
   <effect>
-    <inherits-from>Aircraft/Parachutist/Models/Effects/wingflexL</inherits-from>
+    <inherits-from>Aircraft/paraglider/Models/Effects/wingflexL</inherits-from>
     <object-name>seg2324</object-name>
     <object-name>seg2526</object-name>
     <object-name>seg2728</object-name>
@@ -55,5 +64,12 @@
     <object-name>chords_l</object-name>
     <object-name>control_l</object-name>
   </effect>
+
+  <animation>	<!-- quick and dirty, perfect for small objects -->
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/paraglider/Models/chrome.rgb</texture>
+    <object-name>buckles</object-name>
+  </animation>
 
 </PropertyList>
