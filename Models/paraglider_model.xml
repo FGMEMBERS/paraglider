@@ -4,12 +4,55 @@
 
   <path>pg.ac</path>
   <offsets>
-    <z-m> 0.0</z-m>
     <heading-deg>-90</heading-deg>
-    <pitch-deg>0</pitch-deg>
-    <roll-deg>0</roll-deg>
   </offsets>
 
+  <!-- volume shadow -->
+  <effect>
+    <inherits-from>Effects/shadow-vol</inherits-from>
+    <object-name>volume_shadow</object-name>
+  </effect>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>volume_shadow</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>volume_shadow</object-name>
+    <property>/orientation/pitch-deg</property>
+    <factor>-1.0</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>volume_shadow</object-name>
+    <property>/orientation/roll-deg</property>
+    <factor>1.0</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <!-- GPS handheld -->
   <model>
    <path>Aircraft/paraglider/Models/iqone.xml</path>
    <offsets>
@@ -19,6 +62,7 @@
    </offsets>
  </model>
 
+  <!-- engine model -->
   <model>
    <path>Aircraft/paraglider/Models/thor.xml</path>
    <offsets>
@@ -31,6 +75,7 @@
    </offsets>
  </model>
 
+ <!-- warp the trailing edges of the parachute -->
  <effect>
     <inherits-from>Aircraft/paraglider/Models/Effects/wingflexR</inherits-from>
     <object-name>seg12</object-name>
@@ -65,7 +110,8 @@
     <object-name>control_l</object-name>
   </effect>
 
-  <animation>	<!-- quick and dirty, perfect for small objects -->
+  <!-- quick and dirty, perfect for small objects -->
+  <animation>
     <type>shader</type>
     <shader>chrome</shader>
     <texture>Aircraft/paraglider/Models/chrome.rgb</texture>
