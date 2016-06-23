@@ -8,49 +8,10 @@
   </offsets>
 
   <!-- volume shadow -->
-  <effect>
-    <inherits-from>Effects/shadow-vol</inherits-from>
-    <object-name>volume_shadow</object-name>
-  </effect>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>volume_shadow</object-name>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>volume_shadow</object-name>
-    <property>/orientation/pitch-deg</property>
-    <factor>-1.0</factor>
-    <center>
-      <x-m>0</x-m>
-      <y-m>0</y-m>
-      <z-m>0</z-m>
-    </center>
-    <axis>
-      <x>0</x>
-      <y>1</y>
-      <z>0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>volume_shadow</object-name>
-    <property>/orientation/roll-deg</property>
-    <factor>1.0</factor>
-    <center>
-      <x-m>0</x-m>
-      <y-m>0</y-m>
-      <z-m>0</z-m>
-    </center>
-    <axis>
-      <x>1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
-  </animation>
+  <model>
+   <name>shadow</name>
+   <path>Aircraft/paraglider/Models/shadow.xml</path>
+  </model>
 
   <!-- GPS handheld -->
   <model>
@@ -74,6 +35,13 @@
      <heading-deg>0</heading-deg>
    </offsets>
  </model>
+
+ <!-- interior shadow -->
+ <effect>
+   <inherits-from>Aircraft/paraglider/Models/Effects/paraglider-interior</inherits-from>
+   <object-name>paraglider</object-name>
+   <object-name>iqone</object-name>
+ </effect>
 
  <!-- warp the trailing edges of the parachute -->
  <effect>
