@@ -7,12 +7,6 @@
     <heading-deg>-90</heading-deg>
   </offsets>
 
-  <!-- volume shadow -->
-  <model>
-   <name>shadow</name>
-   <path>Aircraft/paraglider/Models/shadow.xml</path>
-  </model>
-
   <!-- GPS handheld -->
   <model>
    <path>Aircraft/paraglider/Models/iqone.xml</path>
@@ -35,13 +29,6 @@
      <heading-deg>0</heading-deg>
    </offsets>
  </model>
-
- <!-- interior shadow -->
- <effect>
-   <inherits-from>Aircraft/paraglider/Models/Effects/paraglider-interior</inherits-from>
-   <object-name>paraglider</object-name>
-   <object-name>iqone</object-name>
- </effect>
 
  <!-- warp the trailing edges of the parachute -->
  <effect>
@@ -85,5 +72,19 @@
     <texture>Aircraft/paraglider/Models/chrome.rgb</texture>
     <object-name>buckles</object-name>
   </animation>
+
+  <!-- interior shadow -->
+ <effect>
+   <inherits-from>Aircraft/paraglider/Models/Effects/paraglider-interior</inherits-from>
+   <object-name>paraglider</object-name>
+   <object-name>iqone</object-name>
+   <object-name>engine</object-name>
+ </effect>
+
+  <!-- volume shadow -->
+  <model>
+   <name>shadow</name>
+   <path>Aircraft/paraglider/Models/shadow.xml</path>
+  </model>
 
 </PropertyList>
