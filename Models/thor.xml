@@ -4,9 +4,12 @@
 
  <path>thor.ac</path>
  <offsets>
-  <heading-deg>-180</heading-deg>
+  <x-m>0.0</x-m>
+  <y-m>0.47</y-m>
+  <z-m>-0.4</z-m>
+  <roll-deg>-8</roll-deg>
   <pitch-deg>0</pitch-deg>
-  <roll-deg>0</roll-deg>
+  <heading-deg>-180</heading-deg>
  </offsets>
 
  <animation>
