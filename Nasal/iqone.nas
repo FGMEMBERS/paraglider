@@ -1,6 +1,6 @@
-var comment = func(txt, posy, desc) {
+var comment = func(txt, posx, posy, desc) {
   cDefaultGroup.createChild("text", desc)
-                .setTranslation(670, posy)
+                .setTranslation(posx, posy)
                 .setAlignment("left-top")
                 .setFont("typewriter.txf")
                 .setFontSize(40, 1.5)
@@ -10,7 +10,7 @@ var comment = func(txt, posy, desc) {
 
 var variable = func(txt, posy, desc) {
   cDefaultGroup.createChild("text", desc)
-                .setTranslation(660, posy)
+                .setTranslation(665, posy)
                 .setAlignment("right-top")
                 .setFont("DSEG/DSEG7/Classic/DSEG7Classic-BoldItalic.ttf")
                 .setFontSize(80, 1.2)
@@ -36,10 +36,13 @@ cDisplay.set("background", canvas.style.getColor("bg_color"));
 
 var cDefaultGroup = cDisplay.createGroup();
 
-comment( "m/s", 120, "mps");
-comment(   "m", 380, "m");
-comment("km/h", 570, "kmph");
-comment(   "m", 750, "m");
+comment( "m/s", 670, 120, "mps");
+comment("ALT1", 600, 270, "alt1");
+comment(   "m", 670, 380, "m");
+comment("km/h", 670, 570, "kmph");
+comment("ALT3", 600, 630, "alt3");
+comment(   "m", 670, 750, "m");
+comment("TIME", 425, 790, "time");
 
 var vario_t = variable( "0.0", 130, "vario");
 var alt1_t = variable(    "0", 310, "alt");
@@ -59,14 +62,15 @@ var rtimer = maketimer(0.2, func {
   vario_t.setText(sprintf("%.1f", vario_ms));
 
   var glvl = 0;
-  var pressure = (getprop("systems/static/pressure-inhg") or 0);
-  var PA_m = (glvl + 1000*(29.92 - pressure)) * 0.3048;
+  var PA_m = (getprop("/instrumentation/altimeter/pressure-alt-ft") or 0) * 0.3048;
   alt1_t.setText(sprintf("%i", PA_m));
 
   var speed_kmph = (getprop("velocities/airspeed-kt") or 0)* 1.852;
   speed_t.setText(sprintf("%.1f", speed_kmph));
 
-  var time_gmt = getprop("/sim/time/gmt-string");
-  time_t.setText(time_gmt);
+  var hour = getprop("/sim/time/real/hour");
+  var minute = getprop("/sim/time/real/minute");
+  var second = getprop("/sim/time/real/second");
+  time_t.setText(sprintf("%02i:%02i:%02i", hour, minute, second));
 });
 rtimer.start();
