@@ -10,6 +10,17 @@
    </binding>
   </key>
 
+<!-- HUD -->
+   <key n="100">
+   <name>d</name>
+   <desc>Display the HUD</desc>
+   <binding>
+    <command>property-assign</command>
+    <property>/sim/canvas/hud</property>
+    <value type="bool">true</value>
+   </binding>
+  </key>
+
 <!-- walk view -->
    <keyboard>
    <key n="119">

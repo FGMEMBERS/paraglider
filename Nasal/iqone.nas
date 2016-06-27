@@ -1,4 +1,4 @@
-var comment = func(txt, posx, posy, desc) {
+var label = func(txt, posx, posy, desc) {
   cDefaultGroup.createChild("text", desc)
                 .setTranslation(posx, posy)
                 .setAlignment("left-top")
@@ -31,18 +31,18 @@ var cDisplay = canvas.new({
   "view": [795, 1024],
   "mipmapping": 1
 });
-cDisplay.addPlacement({"node": "display"});
+cDisplay.addPlacement({"node": "iq_display"});
 cDisplay.set("background", canvas.style.getColor("bg_color"));
 
 var cDefaultGroup = cDisplay.createGroup();
 
-comment( "m/s", 670, 120, "mps");
-comment("ALT1", 600, 270, "alt1");
-comment(   "m", 670, 380, "m");
-comment("km/h", 670, 570, "kmph");
-comment("ALT3", 600, 630, "alt3");
-comment(   "m", 670, 750, "m");
-comment("TIME", 425, 790, "time");
+label( "m/s", 670, 120, "mps");
+label("ALT1", 600, 270, "alt1");
+label(   "m", 670, 380, "m");
+label("km/h", 670, 570, "kmph");
+label("ALT3", 600, 630, "alt3");
+label(   "m", 670, 750, "m");
+label("TIME", 425, 790, "time");
 
 var vario_t = variable( "0.0", 130, "vario");
 var alt1_t = variable(    "0", 310, "alt");
@@ -52,10 +52,6 @@ var alt3_ = variable(     "0", 670, "alt");
 var time_t = variable("00:00:00", 840, "time");
 
 image("Models/display.png", 0,0, 795, 1024);
-
-var window = canvas.Window.new([240,309],"dialog");
-window.setCanvas(cDisplay);
-
 
 var rtimer = maketimer(0.2, func {
   var vario_ms = (getprop("velocities/vertical-speed-fps") or 0)* 0.3048;

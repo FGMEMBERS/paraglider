@@ -44,6 +44,10 @@ Erik Hofman, erik@ehofman.com		Added ram-air FMD, engine and updated 3D
      <y-offset-m type="float">0.0</y-offset-m>
     </default_exit>
    </map>
+
+   <canvas>
+    <hud type="bool">false</hud>
+   </canvas>
   </model>
 
   <sound>
@@ -87,6 +91,10 @@ Erik Hofman, erik@ehofman.com		Added ram-air FMD, engine and updated 3D
    <key>
     <name>s</name>
     <desc>Start the engine.</desc>
+   </key>
+   <key>
+    <name>d</name>
+    <desc>Show head up display.</desc>
    </key>
    <key>
     <name>{</name> 
