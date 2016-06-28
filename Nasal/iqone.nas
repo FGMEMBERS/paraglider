@@ -30,57 +30,80 @@ var needle = func() {
                .setColor(0,0,0);
 }
 
+# hash table for needle positions
+var needles = [[0,0,0,0,0,0,0,0,0,0]];
+for (var i=0; i<25; i = i+1) {
+    var r0 = 107; var r1 = 268;
+    var a0 = (i*4.32 - 1.5) * 0.0174533;
+    var a1 = (i*4.32 + 1.5) * 0.0174533;
+
+    var r3 = r1+8;
+    var a3 = (a0 + a1)/2;
+
+    var x1 = r0 * math.cos(a0);
+    var y1 = r0 * math.sin(a0);
+
+    var x2 = r1 * math.cos(a0);
+    var y2 = r1 * math.sin(a0);
+
+    var x3 = r3 * math.cos(a3);
+    var y3 = r3 * math.sin(a3);
+
+    var x4 = r1 * math.cos(a1);
+    var y4 = r1 * math.sin(a1);
+
+    var x5 = r0 * math.cos(a1);
+    var y5 = r0 * math.sin(a1);
+
+    append(needles, [x1, y1, x2, y2, x3, y3, x4, y4, x5, y5]);
+}
+
 var draw_vario = func(needle_t, vario) {
-  var min = 0; var max = 0;
+  var min = 0; var max = 0; var sign = 1;
 
   if (vario < -5) {
-    if (vario < -10) vario = -10;
-    min = -5;
-    max = vario+5;
+    if (vario < -9.9) vario = -9.9;
+    min = math.round(-5*vario-25);
+    max = 25;
+    sign = -1;
   }
   else if (vario < 0) {
-    min = vario;
-    max = 0;
+    min = 0;
+    max = math.round(-5*vario+0.5);
+    sign = -1;
   }
   else if (vario > 5) {
-    if (vario > 10) vario = 10;
-    min = vario-5;
-    max = 5;
+    if (vario > 9.9) vario = 9.9;
+    min = math.round(5*vario-25);
+    max = 25;
   }
   else {
     min = 0;
-    max = vario;
+    max = math.round(5*vario+0.5);
   }
 
   needle_t.reset();
-  for (var i=min; i<max; i = i+0.2) {
-    var cx = 349; var cy = 361;
-    var r0 = 107; var r1 = 273;
-    var a0 = (i*21.6 - 1.8) * 0.0174533;
-    var a1 = (i*21.6 + 1.8) * 0.0174533; 
+  var cx = 349; var cy = 361;
+  for (var i=min+1; i<max+1; i = i+1) {
+    var x = cx - needles[i][0];
+    var y = cy - sign*needles[i][1];
+    needle_t.moveTo(x, y);
 
-    var r3 = r1+5;
-    var a3 = (a0 + a1)/2;
+    var x = cx - needles[i][2];
+    var y = cy - sign*needles[i][3];
+    needle_t.lineTo(x, y);
 
-    var y = r0 * math.sin(a0);
-    var x = r0 * math.cos(a0);
-    needle_t.moveTo(cx - x, cy - y);
+    var x = cx - needles[i][4];
+    var y = cy - sign*needles[i][5];
+    needle_t.lineTo(x, y);
 
-    var y = r1 * math.sin(a0);
-    var x = r1 * math.cos(a0);
-    needle_t.lineTo(cx - x, cy - y);
+    var x = cx - needles[i][6];
+    var y = cy - sign*needles[i][7];
+    needle_t.lineTo(x, y);
 
-    var y = r3 * math.sin(a3);
-    var x = r3 * math.cos(a3);
-    needle_t.lineTo(cx - x, cy - y);
-
-    var y = r1 * math.sin(a1);
-    var x = r1 * math.cos(a1);
-    needle_t.lineTo(cx - x, cy - y);
-
-    var y = r0 * math.sin(a1);
-    var x = r0 * math.cos(a1);
-    needle_t.lineTo(cx - x, cy - y);
+    var x = cx - needles[i][8];
+    var y = cy - sign*needles[i][9];
+    needle_t.lineTo(x, y);
     needle_t.close();
   }
   needle_t.setColorFill(0,0,0);
@@ -95,8 +118,8 @@ var cDisplay = canvas.new({
 cDisplay.addPlacement({"node": "iq_display"});
 cDisplay.set("background", canvas.style.getColor("bg_color"));
 
-#var window = canvas.Window.new([240,309],"dialog");
-#window.setCanvas(cDisplay);
+var window = canvas.Window.new([240,309],"dialog");
+window.setCanvas(cDisplay);
 
 var cDefaultGroup = cDisplay.createGroup();
 
