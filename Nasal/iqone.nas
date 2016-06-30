@@ -32,7 +32,7 @@ var needle = func() {
 
 # hash table for needle positions
 var needles = [[0,0,0,0,0,0,0,0,0,0]];
-for (var i=0; i<25; i = i+1) {
+for (var i=0; i<26; i = i+1) {
     var r0 = 107; var r1 = 268;
     var a0 = (i*4.32 - 1.5) * 0.0174533;
     var a1 = (i*4.32 + 1.5) * 0.0174533;
@@ -69,7 +69,7 @@ var draw_vario = func(needle_t, vario) {
   }
   else if (vario < 0) {
     min = 0;
-    max = math.round(-5*vario+0.5);
+    max = 1+math.round(-5*vario);
     sign = -1;
   }
   else if (vario > 5) {
@@ -79,7 +79,7 @@ var draw_vario = func(needle_t, vario) {
   }
   else {
     min = 0;
-    max = math.round(5*vario+0.5);
+    max = 1+math.round(5*vario);
   }
 
   needle_t.reset();
