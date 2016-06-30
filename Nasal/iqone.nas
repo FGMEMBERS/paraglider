@@ -64,7 +64,7 @@ var draw_vario = func(needle_t, vario) {
   if (vario < -5) {
     if (vario < -9.9) vario = -9.9;
     min = math.round(-5*vario-25);
-    max = 25;
+    max = 26;
     sign = -1;
   }
   else if (vario < 0) {
@@ -75,7 +75,7 @@ var draw_vario = func(needle_t, vario) {
   else if (vario > 5) {
     if (vario > 9.9) vario = 9.9;
     min = math.round(5*vario-25);
-    max = 25;
+    max = 26;
   }
   else {
     min = 0;
