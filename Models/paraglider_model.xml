@@ -4,26 +4,30 @@
 
   <path>pg.ac</path>
   <offsets>
-    <z-m> 0.0</z-m>
     <heading-deg>-90</heading-deg>
-    <pitch-deg>0</pitch-deg>
-    <roll-deg>0</roll-deg>
   </offsets>
 
+  <!-- Pilot -->
   <model>
-   <path>Aircraft/paraglider/Models/thor.xml</path>
-   <offsets>
-     <x-m> 0.0</x-m>
-     <y-m> 0.50</y-m>
-     <z-m>-0.4</z-m>
-     <roll-deg>  -8</roll-deg>
-     <pitch-deg>  0</pitch-deg>
-     <heading-deg>0</heading-deg>
-   </offsets>
+   <name>pilot</name>
+   <path>Aircraft/paraglider/Models/pilot.xml</path>
+  </model>
+
+  <!-- GPS handheld -->
+  <model>
+   <name>iqone</name>
+   <path>Aircraft/paraglider/Models/iqone.xml</path>
  </model>
 
+  <!-- engine model -->
+  <model>
+   <name>engine</name>
+   <path>Aircraft/paraglider/Models/thor.xml</path>
+ </model>
+
+ <!-- warp the trailing edges of the parachute -->
  <effect>
-    <inherits-from>Aircraft/Parachutist/Models/Effects/wingflexR</inherits-from>
+    <inherits-from>Aircraft/paraglider/Models/Effects/wingflexR</inherits-from>
     <object-name>seg12</object-name>
     <object-name>seg34</object-name>
     <object-name>seg56</object-name>
@@ -40,7 +44,7 @@
   </effect>
 
   <effect>
-    <inherits-from>Aircraft/Parachutist/Models/Effects/wingflexL</inherits-from>
+    <inherits-from>Aircraft/paraglider/Models/Effects/wingflexL</inherits-from>
     <object-name>seg2324</object-name>
     <object-name>seg2526</object-name>
     <object-name>seg2728</object-name>
@@ -55,5 +59,26 @@
     <object-name>chords_l</object-name>
     <object-name>control_l</object-name>
   </effect>
+
+  <!-- quick and dirty, perfect for small objects -->
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/paraglider/Models/chrome.rgb</texture>
+    <object-name>buckles</object-name>
+  </animation>
+
+  <!-- interior shadow -->
+ <effect>
+   <inherits-from>Aircraft/paraglider/Models/Effects/paraglider-interior</inherits-from>
+   <object-name>paraglider</object-name>
+   <object-name>engine</object-name>
+ </effect>
+
+  <!-- volume shadow -->
+  <model>
+   <name>shadow</name>
+   <path>Aircraft/paraglider/Models/shadow.xml</path>
+  </model>
 
 </PropertyList>
