@@ -2161,6 +2161,8 @@ kids 10
 OBJECT poly
 name "cylinder"
 loc -0.000796884 0.206691 -0.0665888
+texture "cylinder.png"
+texrep 1 2
 crease 90.000000
 numvert 48
 0.0118162 -0.0587785 0

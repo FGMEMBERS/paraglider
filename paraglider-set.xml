@@ -19,7 +19,7 @@ Erik Hofman, erik@ehofman.com		Added ram-air FMD, engine and updated 3D
    <FDM type="int">4</FDM>
    <systems type="int">4</systems>
    <model type="int">4</model>
-   <cockpit type="int">2</cockpit>
+   <cockpit type="int">4</cockpit>
   </rating>
 
   <tags>

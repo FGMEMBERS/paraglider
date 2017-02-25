@@ -12,6 +12,11 @@
   <heading-deg>-180</heading-deg>
  </offsets>
 
+ <effect>
+  <inherits-from>Aircraft/paraglider/Models/Effects/reflect</inherits-from>
+  <object-name>cylinder</object-name>
+ </effect>
+
  <animation>
   <type>spin</type>
   <object-name>propeller</object-name>
