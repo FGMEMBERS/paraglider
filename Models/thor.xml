@@ -13,8 +13,9 @@
  </offsets>
 
  <effect>
-  <inherits-from>Aircraft/paraglider/Models/Effects/reflect</inherits-from>
-  <object-name>cylinder</object-name>
+    <inherits-from>Aircraft/paraglider/Models/Effects/reflection</inherits-from>
+    <object-name>cylinder</object-name>
+    <object-name>box</object-name>
  </effect>
 
  <animation>
