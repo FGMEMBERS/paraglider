@@ -31,7 +31,9 @@ Erik Hofman, erik@ehofman.com		Added ram-air FMD, engine and updated 3D
    <tag>glider</tag>
    <tag>paraglider</tag>
    <tag>single-engine</tag>
-   <tag>18hp</tag>
+   <tag>piston</tag>
+   <tag>stol</tag>
+   <tag>ultralight</tag>
   </tags>
 
   <previews>
