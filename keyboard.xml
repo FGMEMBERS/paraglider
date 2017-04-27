@@ -22,7 +22,6 @@
   </key>
 
 <!-- walk view -->
-   <keyboard>
    <key n="119">
     <name>w</name>
      <desc>Walk forward toward view</desc>
@@ -42,6 +41,5 @@
      <script>walk.walk_about(-0.1)</script>
     </binding>
    </key>
-  </keyboard>
 
 </PropertyList>
