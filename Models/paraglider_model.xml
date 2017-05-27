@@ -7,6 +7,16 @@
     <heading-deg>-90</heading-deg>
   </offsets>
 
+  <!-- Livery System -->
+  <nasal>
+   <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/paraglider/Models/Liveries", 10);
+   </load>
+   <unload>
+      livery_update.stop();
+   </unload>
+  </nasal>
+
   <!-- Pilot -->
   <model>
    <name>pilot</name>
@@ -24,6 +34,12 @@
    <name>engine</name>
    <path>Aircraft/paraglider/Models/thor.xml</path>
  </model>
+
+ <effect>
+    <inherits-from>Aircraft/paraglider/Models/Effects/reflection</inherits-from>
+    <object-name>canopy</object-name>
+    <object-name>buckles</object-name>
+ </effect>
 
  <!-- warp the trailing edges of the parachute -->
  <effect>
@@ -59,14 +75,6 @@
     <object-name>chords_l</object-name>
     <object-name>control_l</object-name>
   </effect>
-
-  <!-- quick and dirty, perfect for small objects -->
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/paraglider/Models/chrome.rgb</texture>
-    <object-name>buckles</object-name>
-  </animation>
 
   <!-- interior shadow -->
  <effect>
